@@ -67,7 +67,7 @@ jobs:
           sam package \
             --region ${TESTING_REGION} \
             --output-template-file packaged-testing.yaml \
-            --resolve-s3 \
+            --resolve-s3 
 
       - name: Almacenar plantilla de testeo compilada para el siguiente paso
         uses: actions/upload-artifact@v4
