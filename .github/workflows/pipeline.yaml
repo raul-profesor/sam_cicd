@@ -79,7 +79,8 @@ jobs:
         run: |
           sam package \
             --region ${PROD_REGION} \
-            --output-template-file packaged-prod.yaml
+            --output-template-file packaged-prod.yaml \
+            --resolve-s3
 
       - name: Almacenar plantilla de producción compilada para el siguiente paso
         uses: actions/upload-artifact@v4
